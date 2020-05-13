@@ -21,7 +21,7 @@ public class EntradaFoto
     //Título de la entrada.
     private String titulo;
     // Fecha de publicacion de la entrada.
-    private LocalDateTime momentoPublicacion;
+    private String momentoPublicacion;
     // Numero de 'me gusta' de la entrada.
     private int cantidadMeGusta;
     // Comentarios de la entrada.
@@ -39,7 +39,7 @@ public class EntradaFoto
         usuario = autor;
         urlImagen = url;
         this.titulo = titulo;
-        momentoPublicacion = LocalDateTime.now();
+        momentoPublicacion = "10 segundos";
         cantidadMeGusta = 0;
         comentarios = new ArrayList<>();
     }
@@ -79,7 +79,7 @@ public class EntradaFoto
      * Devuelve la fecha de publicacion.
      * @return Devuelve la fecha de publicacion.
      */
-    public LocalDateTime getMomentoPublicacion() {
+    public String getMomentoPublicacion() {
         return momentoPublicacion;
     }
 
@@ -95,18 +95,8 @@ public class EntradaFoto
         aDevolver += "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
 
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver += "Escrito hace ";
+        aDevolver += "Escrito hace " + momentoPublicacion + "\n";
 
-        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
-        if (numeroSegundos > 59) {
-            aDevolver += numeroSegundos / 60 + " minutos";
-        }
-        else {
-            aDevolver += numeroSegundos + " segundos";
-        }
-        aDevolver += "\n";
 
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (comentarios.size() == 0) {

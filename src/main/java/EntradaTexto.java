@@ -19,7 +19,7 @@ public class EntradaTexto
     // Contenido de la entrada.
     private String mensaje;
     // Fecha de publicacion de la entrada.
-    private LocalDateTime momentoPublicacion;
+    private String momentoPublicacion;
     // Numero de 'me gusta' de la entrada.
     private int cantidadMeGusta;
     // Comentarios de la entrada.
@@ -30,12 +30,12 @@ public class EntradaTexto
      * Las entradas se crean sin ningun ' me gusta'.
      * La fecha de publicacion coincide con el momento en el que se crea la entrada.
      * @param autor Autor de la entrada.
-     * @param mensaje Contenido de la entrada.
+     * @param texto Contenido de la entrada.
      */
     public EntradaTexto (String autor, String texto) {
         usuario = autor;
         mensaje = texto;
-        momentoPublicacion = LocalDateTime.now();
+        momentoPublicacion = "10 segundos";
         cantidadMeGusta = 0;
         comentarios = new ArrayList<>();
     }
@@ -67,7 +67,7 @@ public class EntradaTexto
      * Devuelve la fecha de publicacion.
      * @return Devuelve la fecha de publicacion.
      */
-    public LocalDateTime getMomentoPublicacion() {
+    public String getMomentoPublicacion() {
         return momentoPublicacion;
     }
 
@@ -83,17 +83,7 @@ public class EntradaTexto
         aDevolver += mensaje + "\n";
 
         // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver += "Escrito hace ";
-
-        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
-        if(numeroSegundos > 59){
-            aDevolver += numeroSegundos / 60 + " minutos";
-        }
-        else {
-            aDevolver += numeroSegundos + " segundos";
-        }
-        aDevolver += "\n";
+        aDevolver += "Escrito hace " + momentoPublicacion + "\n";
 
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (comentarios.size() == 0)         {
