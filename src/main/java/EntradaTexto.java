@@ -27,6 +27,10 @@ public class EntradaTexto extends Entrada
         mensaje = texto;
     }
 
+    public String getAutorYMensaje(){
+        return ("Autor: " + getAutor() + "\nMensaje: " + mensaje);
+    }
+
     /**
      * Devuelve el contenido de la entrada.
      * @return Devuelve el contenido de la entrada.
@@ -42,13 +46,13 @@ public class EntradaTexto extends Entrada
     @Override
     public String toString() {
         String aDevolver = "";
-        aDevolver += "Usuario: " + autor + "\n";
-        aDevolver += "Likes: " + cantidadMeGusta + "\n";
+        aDevolver += "Usuario: " + getAutor() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
         aDevolver += mensaje + "\n";
 
         // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        aDevolver += "Escrito hace " + momentoPublicacion + "\n";
-
+        aDevolver += "Escrito hace " + getMomentoPublicacion() + "\n";
+        ArrayList<String> comentarios = getComentarios();
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (comentarios.size() == 0)         {
             aDevolver += "No hay comentarios\n";

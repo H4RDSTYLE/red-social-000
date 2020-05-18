@@ -32,4 +32,10 @@ public class MuroTest {
         assertEquals(resultado, muro.toString());
     }
 
+    @Test
+    public void test02() {
+        EntradaTexto entradaTexto = new EntradaTexto("Hugo", "Hola bro.");
+        assertEquals("Autor: Hugo\nMensaje: Hola bro.", entradaTexto.getAutorYMensaje());
+    }
+
 }

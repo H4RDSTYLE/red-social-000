@@ -57,14 +57,14 @@ public class EntradaFoto extends Entrada{
     @Override
     public String toString() {
         String aDevolver = "";
-        aDevolver += "Usuario: " + autor + "\n";
-        aDevolver += "Likes: " + cantidadMeGusta + "\n";
+        aDevolver += "Usuario: " + getAutor() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
         aDevolver += "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
 
-        aDevolver += "Escrito hace " + momentoPublicacion + "\n";
+        aDevolver += "Escrito hace " + getMomentoPublicacion() + "\n";
 
-
+        ArrayList<String> comentarios = getComentarios();
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (comentarios.size() == 0) {
             aDevolver += "No hay comentarios\n";

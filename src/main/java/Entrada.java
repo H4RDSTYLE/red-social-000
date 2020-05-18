@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Entrada {
-    protected String autor;
-    protected String momentoPublicacion;
-    protected int cantidadMeGusta;
-    protected ArrayList<String> comentarios;
+    private String autor;
+    private String momentoPublicacion;
+    private int cantidadMeGusta;
+    private ArrayList<String> comentarios;
 
     public Entrada(String autor) {
        this.autor = autor;
@@ -17,6 +17,17 @@ public class Entrada {
         cantidadMeGusta += 1;
     }
 
+    public String getAutor(){
+        return autor;
+    }
+
+    public ArrayList getComentarios(){
+        return comentarios;
+    }
+
+    public int getCantidadMeGusta(){
+        return cantidadMeGusta;
+    }
 
     public String getMomentoPublicacion() {
         return momentoPublicacion;
