@@ -1,4 +1,19 @@
-package PACKAGE_NAME;
+public class EntradaEvento extends Entrada {
+    String mensaje;
 
-public class EntradaEvento {
+    public EntradaEvento(String autor, String mensaje){
+        super(autor);
+        this.mensaje = mensaje;
+    }
+
+    public String getMensaje(){
+        return mensaje;
+    }
+
+    @Override
+    public String toString(){
+        String aDevolver = getAutor() + " " + mensaje + "\n" + "Escrito hace " + getMomentoPublicacion();
+        return aDevolver;
+    }
+
 }

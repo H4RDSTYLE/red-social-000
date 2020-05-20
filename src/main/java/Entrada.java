@@ -8,7 +8,7 @@ public class Entrada {
 
     public Entrada(String autor) {
        this.autor = autor;
-       this.momentoPublicacion = "10 segundos";
+       this.momentoPublicacion = "10 segundos.";
        cantidadMeGusta = 0;
        comentarios = new ArrayList<>();
     }

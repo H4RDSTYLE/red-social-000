@@ -14,28 +14,27 @@ public class MuroTest {
         Muro muro = new Muro();
 
         EntradaTexto entrada01 = new EntradaTexto("Pepe", "Hawai!");
-        EntradaFoto entrada02 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias");
-        EntradaTexto entrada03 = new EntradaTexto("Kim", "Llueve fuera...");
+        EntradaTexto entrada02 = new EntradaTexto("Kim", "Llueve fuera...");
+        EntradaFoto entrada03 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias");
         EntradaFoto entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera");
+        EntradaEvento entrada05 = new EntradaEvento("Hugo", "Ha seguido a Lucia.");
+        EntradaEvento entrada06 = new EntradaEvento("Mulder", "Ha seguido a Scully.");
 
-        muro.addEntradaTexto(entrada01);
-        muro.addEntradaFoto(entrada02);
-        muro.addEntradaTexto(entrada03);
-        muro.addEntradaFoto(entrada04);
+        muro.addEntrada(entrada01);
+        muro.addEntrada(entrada02);
+        muro.addEntrada(entrada03);
+        muro.addEntrada(entrada04);
+        muro.addEntrada(entrada05);
+        muro.addEntrada(entrada06);
 
         System.out.println(muro);
-        String resultado = "Usuario: Pepe\nLikes: 0\nHawai!\nEscrito hace 10 segundos\nNo hay comentarios\n\n\n";
-        resultado += "Usuario: Kim\nLikes: 0\nLlueve fuera...\nEscrito hace 10 segundos\nNo hay comentarios\n\n\n";
-        resultado += "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nEscrito hace 10 segundos\nNo hay comentarios\n\n\n";
-        resultado += "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nEscrito hace 10 segundos\nNo hay comentarios\n\n\n";
-
+        String resultado = "Usuario: Pepe\nLikes: 0\nHawai!\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Usuario: Kim\nLikes: 0\nLlueve fuera...\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Hugo Ha seguido a Lucia.\n" + "Escrito hace 10 segundos.\n\n";
+        resultado += "Mulder Ha seguido a Scully.\n" + "Escrito hace 10 segundos.\n\n";
         assertEquals(resultado, muro.toString());
-    }
-
-    @Test
-    public void test02() {
-        EntradaTexto entradaTexto = new EntradaTexto("Hugo", "Hola bro.");
-        assertEquals("Autor: Hugo\nMensaje: Hola bro.", entradaTexto.getAutorYMensaje());
     }
 
 }
