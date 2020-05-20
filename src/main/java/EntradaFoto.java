@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto extends Entrada{
+public class EntradaFoto extends EntradaComentario{
 
     // URL de la imagen.
     private String urlImagen;
@@ -64,14 +64,14 @@ public class EntradaFoto extends Entrada{
 
         aDevolver += "Escrito hace " + getMomentoPublicacion() + "\n";
 
-        ArrayList<String> comentarios = getComentarios();
+
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (comentarios.size() == 0) {
+        if (getComentarios().size() == 0) {
             aDevolver += "No hay comentarios\n";
         }
         else {
             aDevolver += "Comentarios: \n";
-            for (String comentarioActual : comentarios) {
+            for (String comentarioActual : getComentarios()) {
                 aDevolver += comentarioActual + "\n";
             }
         }

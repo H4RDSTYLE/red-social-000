@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
  *  @version 1.0
  */
 
-public class EntradaTexto extends Entrada
+public class EntradaTexto extends EntradaComentario
 {
     // Contenido de la entrada.
     private String mensaje;
@@ -52,14 +52,14 @@ public class EntradaTexto extends Entrada
 
         // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
         aDevolver += "Escrito hace " + getMomentoPublicacion() + "\n";
-        ArrayList<String> comentarios = getComentarios();
+
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (comentarios.size() == 0)         {
+        if (getComentarios().size() == 0)         {
             aDevolver += "No hay comentarios\n";
         }
         else {
             aDevolver += "Comentarios: \n";
-            for(String comentarioActual : comentarios){
+            for(String comentarioActual : getComentarios()){
                 aDevolver += comentarioActual + "\n";
             }
         }
