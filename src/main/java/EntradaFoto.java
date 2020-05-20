@@ -56,26 +56,9 @@ public class EntradaFoto extends EntradaComentario{
      */
     @Override
     public String toString() {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getAutor() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
-        aDevolver += "Url: " + urlImagen + "\n";
+        String aDevolver = "Url: " + urlImagen + "\n";
         aDevolver += "Titulo: " + titulo + "\n";
-
-        aDevolver += "Escrito hace " + getMomentoPublicacion() + "\n";
-
-
-        // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (getComentarios().size() == 0) {
-            aDevolver += "No hay comentarios\n";
-        }
-        else {
-            aDevolver += "Comentarios: \n";
-            for (String comentarioActual : getComentarios()) {
-                aDevolver += comentarioActual + "\n";
-            }
-        }
-
+        aDevolver += super.toString();
         return aDevolver;
     }
 }

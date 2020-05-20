@@ -12,7 +12,7 @@ public class EntradaEvento extends Entrada {
 
     @Override
     public String toString(){
-        String aDevolver = getAutor() + " " + mensaje + "\n" + "Escrito hace " + getMomentoPublicacion();
+        String aDevolver = getMensaje() + "\n" + super.toString();
         return aDevolver;
     }
 

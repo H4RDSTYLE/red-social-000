@@ -14,6 +14,7 @@ public class MuroTest {
         Muro muro = new Muro();
 
         EntradaTexto entrada01 = new EntradaTexto("Pepe", "Hawai!");
+        entrada01.addComentario("Buena Foto.");
         EntradaTexto entrada02 = new EntradaTexto("Kim", "Llueve fuera...");
         EntradaFoto entrada03 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias");
         EntradaFoto entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera");
@@ -28,12 +29,12 @@ public class MuroTest {
         muro.addEntrada(entrada06);
 
         System.out.println(muro);
-        String resultado = "Usuario: Pepe\nLikes: 0\nHawai!\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
-        resultado += "Usuario: Kim\nLikes: 0\nLlueve fuera...\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
-        resultado += "Usuario: Luis\nLikes: 0\nUrl: https://bit.ly/2W1dO09\nTitulo: Gracias\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
-        resultado += "Usuario: Cristina\nLikes: 0\nUrl: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
-        resultado += "Hugo Ha seguido a Lucia.\n" + "Escrito hace 10 segundos.\n\n";
-        resultado += "Mulder Ha seguido a Scully.\n" + "Escrito hace 10 segundos.\n\n";
+        String resultado = "Hawai!\nUsuario: Pepe\nLikes: 0\nEscrito hace 10 segundos.\nComentarios:\nBuena Foto.\n\n\n";
+        resultado += "Llueve fuera...\nUsuario: Kim\nLikes: 0\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Url: https://bit.ly/2W1dO09\nTitulo: Gracias\nUsuario: Luis\nLikes: 0\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Url: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nUsuario: Cristina\nLikes: 0\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
+        resultado += "Ha seguido a Lucia.\nUsuario: Hugo\nLikes: 0\nEscrito hace 10 segundos.\n\n";
+        resultado += "Ha seguido a Scully.\nUsuario: Mulder\nLikes: 0\nEscrito hace 10 segundos.\n\n";
         assertEquals(resultado, muro.toString());
     }
 

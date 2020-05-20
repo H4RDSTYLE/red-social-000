@@ -21,10 +21,6 @@ public class Entrada {
         return autor;
     }
 
-    public ArrayList getComentarios(){
-        return comentarios;
-    }
-
     public int getCantidadMeGusta(){
         return cantidadMeGusta;
     }
@@ -39,6 +35,10 @@ public class Entrada {
 
     @Override
     public String toString(){
-        return "";
+        String aDevolver = "";
+        aDevolver += "Usuario: " + getAutor() + "\n";
+        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
+        aDevolver += "Escrito hace " + getMomentoPublicacion();
+        return aDevolver;
     }
 }
