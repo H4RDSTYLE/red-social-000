@@ -33,6 +33,10 @@ public class Entrada {
         comentarios.add(textoComentario);
     }
 
+    public void mostrarDetallesPorPantalla(){
+
+    }
+
     @Override
     public String toString(){
         String aDevolver = "";

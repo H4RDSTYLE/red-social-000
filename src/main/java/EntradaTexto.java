@@ -39,6 +39,10 @@ public class EntradaTexto extends EntradaComentario
         return mensaje;
     }
 
+    public void mostrarDetallesPorPantalla(){
+        System.out.print(toString());
+    }
+
     /**
      * Devuelve una cadena con toda la informacion de la entrada.
      * @return Devuelve una cadena con toda la informacion de la entrada.

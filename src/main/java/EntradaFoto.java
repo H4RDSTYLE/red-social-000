@@ -49,6 +49,10 @@ public class EntradaFoto extends EntradaComentario{
         return titulo;
     }
 
+    public void mostrarDetallesPorPantalla(){
+        System.out.print(toString());
+    }
+
 
     /**
      * Devuelve una cadena con toda la informacion de la entrada.

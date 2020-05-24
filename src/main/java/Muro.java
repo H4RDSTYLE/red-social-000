@@ -29,6 +29,13 @@ public class Muro
         entradas.add(entrada);
     }
 
+    public void mostrarDetallesTodasLasEntradas() {
+        for(Entrada entrada : entradas){
+            entrada.mostrarDetallesPorPantalla();
+            System.out.println("\n");
+        }
+}
+
 
     /**
      * Devuelve una cadena con toda la informacion del muro.

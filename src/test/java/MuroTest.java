@@ -29,12 +29,14 @@ public class MuroTest {
         muro.addEntrada(entrada06);
 
         System.out.println(muro);
+        System.out.println("________________________________________");
+        muro.mostrarDetallesTodasLasEntradas();
         String resultado = "Hawai!\nUsuario: Pepe\nLikes: 0\nEscrito hace 10 segundos.\nComentarios:\nBuena Foto.\n\n\n";
         resultado += "Llueve fuera...\nUsuario: Kim\nLikes: 0\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
         resultado += "Url: https://bit.ly/2W1dO09\nTitulo: Gracias\nUsuario: Luis\nLikes: 0\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
         resultado += "Url: https://bit.ly/3cY9vtD\nTitulo: Una foto de mi nevera\nUsuario: Cristina\nLikes: 0\nEscrito hace 10 segundos.\nNo hay comentarios\n\n\n";
-        resultado += "Ha seguido a Lucia.\nUsuario: Hugo\nLikes: 0\nEscrito hace 10 segundos.\n\n";
-        resultado += "Ha seguido a Scully.\nUsuario: Mulder\nLikes: 0\nEscrito hace 10 segundos.\n\n";
+        resultado += "Ha seguido a Lucia.\nUsuario: Hugo\nLikes: 0\nEscrito hace 10 segundos.\n\n\n";
+        resultado += "Ha seguido a Scully.\nUsuario: Mulder\nLikes: 0\nEscrito hace 10 segundos.\n\n\n";
         assertEquals(resultado, muro.toString());
     }
 

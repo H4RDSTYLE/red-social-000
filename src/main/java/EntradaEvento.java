@@ -10,9 +10,13 @@ public class EntradaEvento extends Entrada {
         return mensaje;
     }
 
+    public void mostrarDetallesPorPantalla(){
+        System.out.print(toString());
+    }
+
     @Override
     public String toString(){
-        String aDevolver = getMensaje() + "\n" + super.toString();
+        String aDevolver = getMensaje() + "\n" + super.toString() + "\n";
         return aDevolver;
     }
 
