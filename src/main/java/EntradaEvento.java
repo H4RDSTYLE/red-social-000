@@ -11,7 +11,7 @@ public class EntradaEvento extends Entrada {
     }
 
     public void mostrarDetallesPorPantalla(){
-        System.out.print(toString());
+        System.out.print("Mensaje: " + mensaje);
     }
 
     @Override

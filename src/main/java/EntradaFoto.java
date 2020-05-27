@@ -50,7 +50,7 @@ public class EntradaFoto extends EntradaComentario{
     }
 
     public void mostrarDetallesPorPantalla(){
-        System.out.print(toString());
+        System.out.print("Url: " + urlImagen + "\n" + "Título: " + titulo);
     }
 
 

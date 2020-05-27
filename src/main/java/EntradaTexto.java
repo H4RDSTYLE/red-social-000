@@ -40,7 +40,7 @@ public class EntradaTexto extends EntradaComentario
     }
 
     public void mostrarDetallesPorPantalla(){
-        System.out.print(toString());
+        System.out.print("Mensaje: " + mensaje);
     }
 
     /**
